@@ -63,7 +63,7 @@ const fetchISSFlyOverTimes = (coordinates, callback) => {
 };
 
 
-nextISSTimesForMyLocation = (callback) => {
+const nextISSTimesForMyLocation = (callback) => {
 
   fetchMyIP((error, data) => {
     if (error) {
@@ -79,11 +79,11 @@ nextISSTimesForMyLocation = (callback) => {
         if (error) {
           console.log('Something did not work');
           return callback(error, null);
-        };
+        }
         callback(null, nextPasses);
-      })
-    })
-  })
+      });
+    });
+  });
 };
 
 
